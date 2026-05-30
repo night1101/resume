@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме Data Scientist — Измайлова Лейла</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px 50px;
+        }
+
+        .name {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 20px;
+            color: #4ecdc4;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .contact-item a {
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 50px;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #4ecdc4;
+            display: inline-block;
+        }
+
+        .about-text {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        .skill-category h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #1a1a2e;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Timeline (Education) */
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-year {
+            width: 140px;
+            font-weight: 600;
+            color: #4ecdc4;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tech-badge {
+            background: #e0e7ff;
+            color: #1a1a2e;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .project-result {
+            background: #e8f4f0;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #2d6a4f;
+            margin-top: 10px;
+        }
+
+        /* Summary Table */
+        .summary-table {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #f0f2f5;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 25px;
+            }
+            .main-content {
+                padding: 30px 25px;
+            }
+            .name {
+                font-size: 32px;
+            }
+            .timeline-year {
+                width: 100%;
+                margin-bottom: 6px;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .contact-bar {
+                gap: 12px;
+                flex-direction: column;
+            }
+        }
+
+        hr {
+            margin: 24px 0;
+            border: none;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 20px 50px;
+            background: #f8f9fa;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .badge {
+            background: #4ecdc4;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="name">Измайлова Лейла Юсефовна</div>
+        <div class="title">Data Scientist / ML Engineer (Junior / Intern)</div>
+        <div class="contact-bar">
+            <div class="contact-item">📞 +7 (901) 803-51-26</div>
+            <div class="contact-item">✉️ <a href="mailto:leylaizmailova@yandex.ru">leylaizmailova@yandex.ru</a></div>
+            <div class="contact-item">💻 <a href="https://github.com/night1101" target="_blank">github.com/night1101</a></div>
+            <div class="contact-item">📍 Казань</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- About -->
+        <div class="section">
+            <div class="section-title">📌 О себе</div>
+            <div class="about-text">
+                Выпускница бакалавриата «Инфокоммуникационные сети и системы связи» и магистратуры «Математика и компьютерные науки». 
+                Прошла профессиональную переподготовку по ИИ и ML, обучаюсь в «Школе 21» на направлении Data Science.
+            </div>
+            <div class="about-text">
+                <strong>Ключевые компетенции:</strong> Анализ данных и визуализация, классические ML-алгоритмы, 
+                feature engineering, оптимизация, глубокое понимание математической статистики и линейной алгебры.
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">🛠️ Технические навыки</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Языки программирования</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python (продвинутый)</span>
+                        <span class="skill-tag">C++ (базовый)</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Библиотеки Data Science</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Статистика и оптимизация</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Statsmodels</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">PyGAM</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Машинное обучение</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linear/Ridge/Lasso</span>
+                        <span class="skill-tag">Logit/Probit</span>
+                        <span class="skill-tag">Random Forest</span>
+                        <span class="skill-tag">Gradient Boosting</span>
+                        <span class="skill-tag">KNN / Naive Bayes</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Feature Engineering</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">StandardScaler</span>
+                        <span class="skill-tag">One-Hot Encoding</span>
+                        <span class="skill-tag">Mutual Information</span>
+                        <span class="skill-tag">Chi-square / RFE</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Инструменты</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Google Colab</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">🎓 Образование</div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025 – 2027</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Магистратура, Казанский федеральный университет, институт математики и механики имени Н.И.Лобачевского</div>
+                    <div class="timeline-subtitle">«Математика и компьютерные науки»</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021 – 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Бакалавриат, Поволжский государственный университет телекоммуникаций и информатики</div>
+                    <div class="timeline-subtitle">«Инфокоммуникационные технологии и системы связи»</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024 – 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Профессиональная переподготовка, Самарский национальный исследовательский университет имени академика С.П.Королева</div>
+                    <div class="timeline-subtitle">«Искусственный интеллект и машинное обучение»</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">04.2026 – н.в.</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">«Школа 21» (Сбер)</div>
+                    <div class="timeline-subtitle">Data Science</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-title">📁 Проекты</div>
+
+            <!-- Project 1: Netflix -->
+            <div class="project-card">
+                <div class="project-title">Анализ и классификация контента Netflix <span class="badge">EDA + ML</span></div>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Matplotlib/Seaborn</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                </div>
+                <div class="project-desc">
+                    Классификация типа контента Netflix (Movie / TV Show) на основе метаданных. Проведён EDA (9 визуализаций), 
+                    очистка данных, feature engineering (созданы признаки: content_age, num_cast, title_length, num_genres, month_added).
+                    Сравнены 6 моделей, выполнена гиперпараметрическая оптимизация (GridSearchCV) и отбор признаков.
+                </div>
+                <div class="project-result">
+                    🏆 Лучшая модель: Random Forest (Accuracy = 76.4%, AUC = 0.820)<br>
+                    📊 Ключевые признаки: num_cast (0.187), title_length (0.168), month_added (0.137)
+                </div>
+            </div>
+
+            <!-- Project 2: House Prices -->
+            <div class="project-card">
+                <div class="project-title">Прогнозирование цен на недвижимость</div>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Statsmodels</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                </div>
+                <div class="project-desc">
+                    Построение OLS-модели для предсказания цены дома на основе данных kc_house_data. 
+                    Добавление взаимодействий признаков, анализ значимости через p-value, сравнение R² на train/test.
+                </div>
+                <div class="project-result">
+                    📈 R² = 0.688, улучшение на +1.72% после добавления взаимодействий
+                </div>
+            </div>
+
+            <!-- Project 3: Logistic Regression -->
+            <div class="project-card">
+                <div class="project-title">Классификация качества вида дома (Logit vs Probit)</div>
+                <div class="project-tech">
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Statsmodels</span>
+                </div>
+                <div class="project-desc">
+                    Реализация бинарной и мультиномиальной логистической регрессии. Сравнение Logit и Probit моделей 
+                    по accuracy, log-likelihood и матрице ошибок.
+                </div>
+                <div class="project-result">
+                    ✅ Мультиномиальная модель: 90% точности, Logit и Probit показали сопоставимые результаты
+                </div>
+            </div>
+
+            <!-- Project 4: Regularization -->
+            <div class="project-card">
+                <div class="project-title">Регуляризация и отбор признаков (Lasso, Ridge, Stepwise)</div>
+                <div class="project-tech">
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">NumPy</span>
+                </div>
+                <div class="project-desc">
+                    Сравнение Lasso и Ridge регрессии. На синтетических данных Lasso обнулил 8 из 8 незначимых признаков. 
+                    Кросс-валидация для выбора оптимальных гиперпараметров.
+                </div>
+                <div class="project-result">
+                    🔍 Lasso успешно отбирает признаки, Ridge — сжимает коэффициенты
+                </div>
+            </div>
+
+            <!-- Project 5: Nonparametric -->
+            <div class="project-card">
+                <div class="project-title">Непараметрическая регрессия (Сплайны, GAM, Gaussian Process)</div>
+                <div class="project-tech">
+                    <span class="tech-badge">SciPy</span>
+                    <span class="tech-badge">PyGAM</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                </div>
+                <div class="project-desc">
+                    Сравнение 5 методов аппроксимации: полиномы, B-сплайны, сглаживающие сплайны, GAM, Gaussian Process.
+                </div>
+                <div class="project-result">
+                    🚀 Лучший результат: Gaussian Process (MSE = 0.00278), GAM (MSE = 0.00497)
+                </div>
+            </div>
+
+            <!-- Project 6: Optimization -->
+            <div class="project-card">
+                <div class="project-title">Сравнение методов оптимизации (DFP, Пауэлл, CEM)</div>
+                <div class="project-tech">
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">Matplotlib</span>
+                </div>
+                <div class="project-desc">
+                    Реализация трёх методов для поиска экстремума функции двух переменных. Анализ сходимости из разных 
+                    начальных точек, визуализация траекторий на контурной карте и в 3D.
+                </div>
+                <div class="project-result">
+                    ⚡ DFP: 6-19 итераций, Пауэлл: стабильный, CEM: глобальный поиск (8000-10000 вызовов)
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Table -->
+        <div class="section">
+            <div class="section-title">📊 Сводная таблица проектов</div>
+            <div class="summary-table">
+                <table>
+                    <thead>
+                        <tr><th>Проект</th><th>Задача</th><th>Лучший метод</th><th>Метрика</th><th>Значение</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Netflix</td><td>Классификация</td><td>Random Forest</td><td>Accuracy</td><td>76.4%</td></tr>
+                        <tr><td>Цены на жильё</td><td>Регрессия</td><td>OLS + взаимодействия</td><td>R²</td><td>0.704</td></tr>
+                        <tr><td>Классификация view</td><td>Классификация</td><td>Logit (мультиномиальный)</td><td>Accuracy</td><td>90%</td></tr>
+                        <tr><td>Регуляризация</td><td>Отбор признаков</td><td>Lasso</td><td>Ненулевых коэф.</td><td>2/10</td></tr>
+                        <tr><td>Непараметрика</td><td>Аппроксимация</td><td>Gaussian Process</td><td>MSE</td><td>0.00278</td></tr>
+                        <tr><td>Оптимизация</td><td>Поиск экстремума</td><td>DFP</td><td>Итераций</td><td>6-19</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Experience and Certificates Two Column -->
+        <div class="two-col">
+            <div class="section">
+                <div class="section-title">💼 Опыт работы</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 – н.в.</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Университетские проекты по машинному обучению</div>
+                        <div class="timeline-subtitle">Курсовые и исследовательские работы</div>
+                        <div class="timeline-desc">
+                            Выполнила 6 учебных проектов, охватывающих ключевые направления ML:<br>
+                            • Регрессия (линейная, Lasso, Ridge, непараметрическая)<br>
+                            • Классификация (логистическая регрессия, Random Forest, Gradient Boosting)<br>
+                            • Оптимизация (градиентные и безградиентные методы)<br>
+                            • Отбор признаков и регуляризация
+                        </div>
+
+                    
+                </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📜 Сертификаты и курсы</div>
+                <ul style="margin-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Профессиональная переподготовка — «Искусственный интеллект и машинное обучение» (2024-2025)</li>
+                    <li>«Школа 21» — Data Science (2026 – н.в.)</li>
+                    <li>Сертификат Stepik: Алгоритмы: теория и практика. Методы</li>
+                    <li>Сертификат Stepik: Введение в SQL</li>
+                    <li>Сертификат Kaggle: Intro to Machine Learning</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="section">
+            <div class="section-title">🏆 Дополнительно</div>
+            <ul style="margin-left: 20px; color: #555; line-height: 1.8;">
+                <li>GitHub портфолио — 6 завершённых проектов по ML, статистике и оптимизации</li>
+                <li>Код-ревью — опыт проверки кода в «Школе 21»</li>
+                <li>Совмещаю магистратуру, учёбу в «Школе 21» и самостоятельные проекты</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="section">
+            <div class="section-title">📬 Контакты</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 16px;">
+                <div>💻 <strong>GitHub:</strong> <a href="https://github.com/night1101" target="_blank">github.com/night1101</a></div>
+                <div>📱 <strong>Telegram:</strong> @night_1101</div>
+                <div>✉️ <strong>Email:</strong> <a href="mailto:leylaizmailova@yandex.ru">leylaizmailova@yandex.ru</a></div>
+            </div>
+        </div>
+
+    </div> <!-- end main-content -->
+
+    <!-- Footer -->
+    <div class="footer-note">
+        Полное портфолио с кодом проектов доступно на GitHub
+    </div>
+</div> <!-- end container -->
+</body>
+</html>
